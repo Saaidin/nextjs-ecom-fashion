@@ -6,7 +6,7 @@ import { BsBag } from "react-icons/bs"
 const Header = () => {
   return (
     <header>
-      <div className="container mx-auto flex items-center justify-between h-full">
+      <div className="container mx-auto flex items-center justify-between h-full sm:w-11/12">
         {/* logo */}
         <Link href={"/"}>
           <div>
