@@ -5,7 +5,9 @@ const HomeContents = () => {
   return (
     <div>
       <Hero />
-      <Product />
+      <section>
+        <Product />
+      </section>
     </div>
   )
 }
