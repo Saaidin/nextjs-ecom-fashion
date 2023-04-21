@@ -18,12 +18,9 @@ const Hero = () => {
             <br />
             <span className="font-semibold">WOMENS</span>
           </h1>
-          <Link
-            href={"/"}
-            className="self-start uppercase font-semibold border-b-2 border-primary"
-          >
-            Discover More
-          </Link>
+          <div className="self-start uppercase font-semibold border-b-2 border-primary">
+            <Link href={"/"}>Discover More</Link>
+          </div>
         </div>
         {/* image */}
         <div className="hidden lg:block">
