@@ -29,15 +29,17 @@ const Product = ({ product }) => {
               <BsPlus className="text-3xl" />
             </div>
           </button>
-          <Link
-            href={`/product/${id}`}
-            className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
-          >
-            <BsEyeFill />
-          </Link>
+          <div className="cursor-pointer">
+            <Link
+              href={`/product/${id}`}
+              className="w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl"
+            >
+              <BsEyeFill />
+            </Link>
+          </div>
         </div>
       </div>
-      <div>
+      <div className="cursor-pointer">
         <div className="text-sm capitalize text-gray-500 mb-1">{category}</div>
         <Link href={`/product/${id}`}>
           <h2 className="font-semibold mb-1">{title}</h2>

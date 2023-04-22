@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { useContext } from "react"
+import { CartContext } from "../../contexts/CartContext"
 
 export async function getStaticPaths() {
   const res = await fetch("https://fakestoreapi.com/products")
@@ -28,7 +30,9 @@ export async function getStaticProps(context) {
 }
 
 export default function ProductDetails({ product }) {
-  const { title, price, description, image } = product
+  const { id, title, price, description, image } = product
+
+  const { addToCart } = useContext(CartContext)
 
   return (
     <section className="pt-32 pb-12 lg:py-32 h-screen flex items-center">
@@ -54,7 +58,7 @@ export default function ProductDetails({ product }) {
             </div>
             <p className="mb-8">{description}</p>
             <button
-              onClick={() => addToCart(product, product.id)}
+              onClick={() => addToCart(product, id)}
               className="bg-primary py-4 px-8 text-white"
             >
               Add to cart

@@ -25,8 +25,8 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between h-full sm:w-11/12">
         {/* logo */}
-        <Link href={"/"}>
-          <div>
+        <div>
+          <Link href={"/"}>
             <Image
               className="w-[40px]"
               src={Logo}
@@ -34,8 +34,8 @@ const Header = () => {
               width={40}
               height={40}
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
         {/* cart */}
         <div
           onClick={() => setIsOpen(!isOpen)}
